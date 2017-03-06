@@ -1,0 +1,154 @@
+body {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 24px;
+    font-family: 'Helvetica Neue'h;
+}
+a {
+    text-decoration: none;
+}
+/* <---- Header ---> */
+.wix-page-header {
+	color: #ffffff;
+	background-image: url("./img/space.jpeg");
+	height: 20%;
+	background-attachment: fixed;
+    width: 100%;
+}
+	@media screen and (min-width: 64em) {
+		.wix-page-header {
+			padding-top: 6rem;
+			padding-bottom: 18rem; } 
+         .wix-page-container {
+             width:80%;
+             margin-left: 10%;
+             padding-left: 15px;
+         }   
+            }
+	@media screen and (min-width: 42em) and (max-width: 64em) {
+		.wix-page-header {
+			padding: 3rem 4rem; } }
+	@media screen and (max-width: 42em) {
+		.wix-page-header {
+			padding: 2rem 1rem; } 
+        .wix-page-container {
+             width: 100%;
+         }    
+            }
+
+.wix-page-header .dash-image-div {
+	margin-bottom: 20px;
+}
+    @media screen and (max-width: 42em) {
+        .wix-page-header .dash-image {
+	        width: 80%;
+        }
+    }
+
+.top-title {
+	font-family: 'Helvetica Neue';
+	font-size: 84px;
+	margin-top: 72px;
+	letter-spacing: 3px;
+	font-weight: 100;
+}
+    @media screen and (max-width: 42em) { 
+        .main-logo {
+            width:90%;
+            margin-left: 5%;
+            
+        } 
+        .top-title {
+            width: 90%;
+            margin-left: 5%;
+            text-align: center;
+        }
+        .project-tagline {
+            width: 90%;
+            margin-left: 5%;
+            text-align: center;
+        } 
+    }
+
+.project-tagline {
+	font-family: 'Helvetica Neue' ,sans-serif;
+	font-size: 24px;
+	font-weight: 100;
+	margin-top: 48px;
+	letter-spacing: 3px;
+}
+
+/* <---- Projects ---> */
+
+.projects-container {
+    padding : 10px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+    @media screen and (max-width: 42em) {
+    .projects-container {
+    width: 100%;
+    }}
+    @media screen and (min-width: 64em) {
+		.projects-container {
+			width: 80%;
+            margin-left: 10%; } }
+.project {
+    display: inline-block; 
+    vertical-align: top; 
+    padding: 5px 16px; 
+    margin-top: 30px; 
+}
+
+    @media screen and (max-width: 42em) {
+    .project {
+    width: 90%;
+    margin-left:5%;
+    } }
+    @media screen and (min-width: 64em) {
+		.project {
+			width: 50%; } }
+
+.project-github-link {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.project-demoapp-link {
+    margin: 5px;
+}
+
+.project-video-div {
+    margin-left: -20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.project-video-iphone {
+    position: relative;
+    top: 48px;
+    left: 30px;
+}
+.project-video-android {
+    position: relative;
+    top: 31px;
+    left:14px;
+}
+.apple-icon {
+    cursor: pointer;
+    width: 30px;
+}
+
+.android-icon {
+    cursor: pointer;
+    width: 30px;
+}
+
+.iphone-mock-img {
+    background-image: url("./img/iphone-mock.png");
+}
+
+.android-mock-img {
+    background-image: url("./img/iphone-mock.png");
+}
+
+
