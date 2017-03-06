@@ -4,7 +4,8 @@
         "description": "App-wide support for 100% native navigation with an easy cross-platform interface.",
         "title": "React Native Navigation",
         "github": "https://github.com/wix/react-native-navigation",
-        "videoUrl": "something",
+        "AndroidVideoUrl": "",
+        "IOSVideoUrl": "something",
         "IOSDemoAppLink": "something",
         "AndroidDemoAppLink": "something"
     },
@@ -12,7 +13,8 @@
         "description" : "Handle all the aspects of push notifications for your app, including remote and local notifications, interactive notifications, silent notifications, and more.",
         "title": "React Native Notifications",
         "github": "https://github.com/wix/react-native-notifications",
-        "videoUrl": "something",
+        "AndroidVideoUrl": "something",
+        "IOSVideoUrl": "https://wix.github.io/react-native//assets/themes/bootstrap-3/components/images/declerative/oneapp-navigation-movie.mp4",
         "IOSDemoAppLink": "",
         "AndroidDemoAppLink": ""
     },
@@ -20,15 +22,17 @@
         "title": "React Native Camera Kit",
         "description": "Advanced native camera control with pre-defined aspect ratio, crop and more",
         "github": "https://github.com/wix/react-native-camera-kit",
-        "videoUrl": "something",
-        "IOSDemoAppLink": "",
+        "AndroidVideoUrl": "something",
+        "IOSVideoUrl": "something",
+        "IOSDemoAppLink": "sd",
         "AndroidDemoAppLink": ""
     },
     "project4": {
         "title": "Detox",
         "description": "Graybox E2E tests and automation library for mobile",
         "github": "https://github.com/wix/detox",
-        "videoUrl": "",
+        "AndroidVideoUrl": "asdw",
+        "IOSVideoUrl": "",
         "IOSDemoAppLink": "",
         "AndroidDemoAppLink": ""
     }

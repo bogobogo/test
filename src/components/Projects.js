@@ -27,7 +27,7 @@ class Projects extends Component {
                         <h2 className="project-title">{p.title}</h2>
                         <p className="project-description">{p.description}</p>
                         <a className="project-github-link"href={p.github}>View on Github ></a>
-                        {p.videoUrl && <VideoDemo changeVideo={this.changeVideo}/> }
+                        {(p.AndroidVideoUrl || p.IOSVideoUrl) && <VideoDemo AndroidVideoUrl={p.AndroidVideoUrl} IOSVideoUrl={p.IOSVideoUrl} changeVideo={this.changeVideo}/>}
                         <div className="project-demoapp-links-container"> 
                         {p.AndroidDemoAppLink && <a className="project-demoapp-link" href="#"><img src={appStoreBadge}></img></a>}
                         {p.IOSDemoAppLink && <a className="project-demoapp-link" href="#"><img src={playStoreBadge}></img></a>}

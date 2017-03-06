@@ -14,16 +14,24 @@ class VideoDemo extends Component {
   render() {
     return (
         <div>
+            {(this.props.AndroidVideoUrl && this.props.IOSVideoUrl)  && 
             <div>
-                <a><img className="android-icon" onClick={this.props.changeVideo('android').bind(this)} style={(this.state.showVideo === 'ios') ? {opacity: 0.4} : {opacity: 1}} src={androidIcon} /></a>
-                <a><img className="apple-icon" onClick={this.props.changeVideo('ios').bind(this)} style={(this.state.showVideo === 'android') ? {opacity: 0.4} : {opacity: 1}} src={iphoneIcon} /></a>
-            </div>
+                 <a><img className="apple-icon" onClick={this.props.changeVideo('ios').bind(this)} style={(this.state.showVideo === 'android') ? {opacity: 0.4} : {opacity: 1}} src={iphoneIcon} /></a>    
+                 <a><img className="android-icon" onClick={this.props.changeVideo('android').bind(this)} style={(this.state.showVideo === 'ios') ? {opacity: 0.4} : {opacity: 1}} src={androidIcon} /></a>
+            </div> }
+            {(this.props.IOSVideoUrl) ? 
             <div  className="project-video-div" style={(this.state.showVideo === 'ios') ? styles.iphoneMockImg : styles.androidMockImg}>
             <video className={(this.state.showVideo === 'ios') ? "project-video-iphone" : "project-video-android"} height="320" width="180" autoPlay={true} muted="" loop="">
-            <source src="https://wix.github.io/react-native//assets/themes/bootstrap-3/components/images/declerative/oneapp-navigation-movie.mp4" type="video/mp4"/>
+            <source src={(this.state.showVideo === 'ios') ? this.props.IOSVideoUrl : this.props.AndroidVideoUrl} type="video/mp4"/>
                 Your browser does not support the video tag.
             </video>
             </div>
+             : <div  className="project-video-div" style={styles.androidMockImg}>
+            <video className="project-video-android" height="320" width="180" autoPlay={true} muted="" loop="">
+            <source src={this.props.AndroidVideoUrl} type="video/mp4"/>
+                Your browser does not support the video tag.
+            </video>
+            </div> }
         </div>
     );
   }
@@ -36,8 +44,8 @@ const styles = {
         background: `url(${iphoneMock}) no-repeat top left transparent`   
     },
     androidMockImg: {
-        width: 203,
-        height: 422,
+        width: 243,
+        height: 417,
         background: `url(${androidMock}) no-repeat top left transparent`
     }
 }
