@@ -43,7 +43,7 @@ class Footer extends Component {
                 </ul>
             </div>
             <div className="email-container">
-                <a href="https://wix.com" target="_blank"><img src="https://static.wixstatic.com/media/9ab0d1_382cbda7c1824140b9eea75d826873f2.png/v1/fill/w_95,h_22,al_c,q_80,usm_0.66_1.00_0.01/9ab0d1_382cbda7c1824140b9eea75d826873f2.png"/></a>
+                <a className="subscribe-button-link" href="https://wix.com"><img src="https://static.wixstatic.com/media/9ab0d1_382cbda7c1824140b9eea75d826873f2.png/v1/fill/w_95,h_22,al_c,q_80,usm_0.66_1.00_0.01/9ab0d1_382cbda7c1824140b9eea75d826873f2.png"/></a>
                 <p>
                     At Wix Engineering we develop some of the most innovative cloud-based web applications that influence our 80+ million users worldwide.
                 </p>

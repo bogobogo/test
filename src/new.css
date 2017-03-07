@@ -7,22 +7,40 @@ body {
 a {
     text-decoration: none;
 }
+
+header {
+    width: 70%;
+    margin-left: 15%;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+@media screen and (max-width: 42em) { 
+   header {
+    width: 50%;
+    margin-left:25%;
+}     
+}
+
 /* <---- Header ---> */
 .wix-page-header {
 	color: #ffffff;
-	background-image: url("./img/space.jpeg");
+	background-color: rgb(25,48,62);
 	height: 20%;
+    background-image: url('./img/space.jpeg');
 	background-attachment: fixed;
     width: 100%;
+    
 }
 	@media screen and (min-width: 64em) {
 		.wix-page-header {
-			padding-top: 6rem;
-			padding-bottom: 18rem; } 
+			padding-top: 1rem;
+			padding-bottom: 1rem; } 
          .wix-page-container {
-             width:80%;
-             margin-left: 10%;
+             /*text-align: center;*/
+             width:70%;
+             margin-left: 15%;
              padding-left: 15px;
+              text-align: center;
          }   
             }
 	@media screen and (min-width: 42em) and (max-width: 64em) {
@@ -52,6 +70,17 @@ a {
 	letter-spacing: 3px;
 	font-weight: 100;
 }
+
+.project-tagline {
+	font-family: 'Helvetica Neue' ,sans-serif;
+	font-size: 24px;
+	font-weight: 100;
+	margin-top: 40px;
+    line-height: 1.9;
+    padding-bottom: 20px;
+	letter-spacing: 3px;
+}
+
     @media screen and (max-width: 42em) { 
         .main-logo {
             width:90%;
@@ -62,21 +91,17 @@ a {
             width: 90%;
             margin-left: 5%;
             text-align: center;
+            font-size: 30px;
         }
         .project-tagline {
             width: 90%;
+            font-size: 20px;
             margin-left: 5%;
             text-align: center;
         } 
     }
 
-.project-tagline {
-	font-family: 'Helvetica Neue' ,sans-serif;
-	font-size: 24px;
-	font-weight: 100;
-	margin-top: 48px;
-	letter-spacing: 3px;
-}
+
 
 /* <---- Projects ---> */
 
@@ -84,6 +109,9 @@ a {
     padding : 10px;
     margin-top: 0;
     margin-bottom: 30px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
     @media screen and (max-width: 42em) {
     .projects-container {
@@ -91,35 +119,125 @@ a {
     }}
     @media screen and (min-width: 64em) {
 		.projects-container {
-			width: 80%;
-            margin-left: 10%; } }
+			width: 70%;
+            margin-left: 15%; } }
+
+.small-project {
+
+}
+
 .project {
-    display: inline-block; 
+    background-color: rgb(249,247,247); 
+    display: flex; 
     vertical-align: top; 
     padding: 5px 16px; 
     margin-top: 30px; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    flex-wrap: wrap;
+    
 }
 
     @media screen and (max-width: 42em) {
     .project {
-    width: 90%;
-    margin-left:5%;
+    width: 100%;
+    justify-content: center;
+    
     } }
+.project-text-container{
+    width: 50%;
+}
+.project-demoapp-links-container{
+    display: flex;
+    
+}
+.project-icons-container {
+    flex:1;
+    margin-left: 35%;
+    width:30%;
+    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
     @media screen and (min-width: 64em) {
 		.project {
-			width: 50%; } }
+			width: 47%; }
+        .project-media-container{
+            margin-left: 40px;}
+             }
+       .project-demoapp-links-container{
+            margin-top: 150px;
+            justify-content: center;
+    
+        }
+
+    @media screen and (max-width: 42em) {
+        .project-text-container{
+            width: auto;
+        }
+        .project-media-container {
+            
+        }
+        .project-demoapp-links-container{
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: auto;
+            
+        }
+}
+.project-title {
+
+}
+
+.project-description {
+
+}
 
 .project-github-link {
     display: block;
     margin-bottom: 20px;
 }
+@media screen and (max-width: 42em) {
+    .project-title {
+        text-align: center;
+    }
+
+    .project-description {
+        text-align: center;
+    }
+
+    .project-github-link {
+        text-align: center;
+    }
+}
+
+.apple-icon {
+    cursor: pointer;
+    width: 30px;
+    flex: 1;
+}
+
+.android-icon {
+    cursor: pointer;
+    width: 30px;
+    flex: 1;
+}
+
+.iphone-mock-img {
+    background-image: url("./img/iphone-mock.png");
+}
+
+.android-mock-img {
+    background-image: url("./img/iphone-mock.png");
+}
 
 .project-demoapp-link {
     margin: 5px;
 }
-
+.download-demo-title {
+    display: block;
+}
 .project-video-div {
-    margin-left: -20px;
     margin-top: 15px;
     margin-bottom: 10px;
 }
@@ -133,23 +251,9 @@ a {
     top: 31px;
     left:14px;
 }
-.apple-icon {
-    cursor: pointer;
-    width: 30px;
+@media screen and (max-width: 42em) {  
 }
 
-.android-icon {
-    cursor: pointer;
-    width: 30px;
-}
-
-.iphone-mock-img {
-    background-image: url("./img/iphone-mock.png");
-}
-
-.android-mock-img {
-    background-image: url("./img/iphone-mock.png");
-}
 
 
 /*<---- Footer ---> */
@@ -192,6 +296,7 @@ a {
 	color: grey;
 	width: 130px;
 	align-items: center;
+    text-decoration: none;
 
 	-webkit-transition: background-color, color 1s ease-out;
 	-moz-transition: background-color, color 1s ease-out;
@@ -202,6 +307,11 @@ a {
 .wix-footer .subscribe-button:hover {
 	color: #733CA6;
 	border-color: #733CA6;
+    text-decoration: none;
+    
+}
+.wix-footer .subscribe-button-link:hover{
+    text-decoration: none;
 }
 
 .wix-footer .footer-links-container {

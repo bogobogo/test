@@ -9,16 +9,21 @@ class Header extends Component {
 
   render() {
     return (
+        <div>
        <section className="wix-page-header">
-         <div className="wix-page-container">
-            <img src={logo} className="main-logo"/>
+           <header>
+                <img src={logo} className="main-logo"/>
+            </header>
+            <div className="wix-page-container">
+             
+            
             <h1 className="top-title">Mobile Open Source</h1>
-            <h2 className="project-tagline">Production Ready Open Source Projects</h2>
-            <div className="dash-image-div">
-                <img className="dash-image" src={dash}/>
-            </div>
-          </div>
-      </section>
+            <h2 className="project-tagline">We Are Contributing All of Our React Native Stack to the Community. <br/> All MIT. All Maintained.</h2>
+        </div>
+        </section>
+         
+        </div>
+      
     );
   }
 }

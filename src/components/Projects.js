@@ -2,12 +2,21 @@ import React, { Component } from 'react';
 import androidImage from '../img/android-camera.png'
 import appStoreBadge from '../img/app-store-badge.svg'
 import playStoreBadge from '../img/google-play-badge.svg'
-
 import VideoDemo from './VideoDemo.js'
+
+const ProjectsDemoAppLink = ({p}) => (
+        <div className="project-demoapp-links-container"> 
+            {p.AndroidDemoAppLink && <a className="project-demoapp-link" href="#"><img src={appStoreBadge}></img></a>}
+            {p.IOSDemoAppLink && <a className="project-demoapp-link" href="#"><img src={playStoreBadge}></img></a>}
+        </div>  
+    )
+
 
 class Projects extends Component {
   constructor(props){
     super(props)
+    this.state = {width: window.innerWidth}
+    console.log(this.state.width)
   }
 
   changeVideo(os) {
@@ -24,14 +33,16 @@ class Projects extends Component {
                console.log(this.changeVideo);
                return (
                    <div key={project} className="project">
+                        <div className='project-text-container'>
                         <h2 className="project-title">{p.title}</h2>
                         <p className="project-description">{p.description}</p>
                         <a className="project-github-link"href={p.github}>View on Github ></a>
-                        {(p.AndroidVideoUrl || p.IOSVideoUrl) && <VideoDemo AndroidVideoUrl={p.AndroidVideoUrl} IOSVideoUrl={p.IOSVideoUrl} changeVideo={this.changeVideo}/>}
-                        <div className="project-demoapp-links-container"> 
-                        {p.AndroidDemoAppLink && <a className="project-demoapp-link" href="#"><img src={appStoreBadge}></img></a>}
-                        {p.IOSDemoAppLink && <a className="project-demoapp-link" href="#"><img src={playStoreBadge}></img></a>}
-                        </div>
+                         {(this.state.width > 450) && <ProjectsDemoAppLink p={p}/>}
+                        </div> 
+                        
+                        {(p.AndroidVideoUrl || p.IOSVideoUrl) && <VideoDemo AndroidVideoUrl={p.AndroidVideoUrl} IOSVideoUrl={p.IOSVideoUrl} changeVideo={this.changeVideo}/>} 
+                        {(this.state.width <= 450) && <ProjectsDemoAppLink p={p}/>}
+                        
                     </div>
                )
            })}

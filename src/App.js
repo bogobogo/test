@@ -16,7 +16,7 @@ class App extends Component {
       <div >
         <Header/>
         <Projects projectsData={projects}/>
-        <Footer/>
+        {/*<Footer/>*/}
       </div>
     );
   }
