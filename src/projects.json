@@ -1,5 +1,5 @@
 {
-    "projectList": ["project1", "project2", "project3", "project4"],
+    "projectList": ["project1", "project2", "project3"],
     "project1": {
         "description": "App-wide support for 100% native navigation with an easy cross-platform interface.",
         "title": "React Native Navigation",
