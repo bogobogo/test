@@ -34,13 +34,13 @@ class VideoDemo extends Component {
             
             {(this.props.IOSVideoUrl) ? 
             <div className="project-video-div" style={(this.state.showVideo === 'ios') ? styles.iphoneMockImg : styles.androidMockImg}>
-            <video ref="vidRef" className={"project-video-iphone"} height="320" width="180"  muted="" loop={true}>
+            <video playsinline ref="vidRef" className={"project-video-iphone"} height="320" width="180"  muted="" loop={true}>
             <source src={(this.state.showVideo === 'ios') ? this.props.IOSVideoUrl : this.props.AndroidVideoUrl} type="video/mp4"/>
                 Your browser does not support the video tag.
             </video>
             </div>
              : <div  className="project-video-div" style={styles.androidMockImg}>
-            <video ref="vidRef" className="project-video-android" height="320" width="180"  muted="" loop={true}>
+            <video playsinline ref="vidRef" className="project-video-android" height="320" width="180"  muted="" loop={true}>
             <source src={this.props.AndroidVideoUrl} type="video/mp4"/>
                 Your browser does not support the video tag.
             </video>
