@@ -1,10 +1,10 @@
 {
-    "projectList": ["project1", "project2", "project3"],
+    "projectList": ["project1", "project2", "project3", "project4"],
     "project1": {
         "description": "App-wide support for 100% native navigation with an easy cross-platform interface.",
         "title": "React Native Navigation",
         "github": "https://github.com/wix/react-native-navigation",
-        "AndroidVideoUrl": "",
+        "AndroidVideoUrl": "asd",
         "IOSVideoUrl": "https://storage.googleapis.com/legati-app.appspot.com/react-native-interactable-720.mov",
         "IOSDemoAppLink": "https://storage.googleapis.com/legati-app.appspot.com/react-native-interactable-720.mov",
         "AndroidDemoAppLink": "something"
@@ -32,7 +32,7 @@
         "description": "Graybox E2E tests and automation library for mobile",
         "github": "https://github.com/wix/detox",
         "AndroidVideoUrl": "",
-        "IOSVideoUrl": "",
+        "IOSVideoUrl": "as",
         "IOSDemoAppLink": "",
         "AndroidDemoAppLink": ""
     }

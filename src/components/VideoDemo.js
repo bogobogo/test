@@ -10,6 +10,16 @@ class VideoDemo extends Component {
     this.state = { showVideo: 'ios'}
   }
 
+  componentDidMount() {
+      (this.props.playing == this.props.project) ? this.playVideo() : this.pauseVideo()
+  }
+
+  componentDidUpdate() {
+      (this.props.playing == this.props.project) ? this.playVideo() : this.pauseVideo()
+  }
+  changeVideo(os) {
+        (os === 'android') ?  this.setState({showVideo: 'android'}) :  this.setState({showVideo: 'ios'})
+  }
   playVideo() {
     this.refs.vidRef.play()
   }
@@ -23,7 +33,7 @@ class VideoDemo extends Component {
         <div className="project-media-container">
             
             {(this.props.IOSVideoUrl) ? 
-            <div onMouseEnter={this.playVideo.bind(this)} onMouseLeave={this.pauseVideo.bind(this)}  className="project-video-div" style={(this.state.showVideo === 'ios') ? styles.iphoneMockImg : styles.androidMockImg}>
+            <div className="project-video-div" style={(this.state.showVideo === 'ios') ? styles.iphoneMockImg : styles.androidMockImg}>
             <video ref="vidRef" className={"project-video-iphone"} height="320" width="180"  muted="" loop={true}>
             <source src={(this.state.showVideo === 'ios') ? this.props.IOSVideoUrl : this.props.AndroidVideoUrl} type="video/mp4"/>
                 Your browser does not support the video tag.
@@ -37,8 +47,8 @@ class VideoDemo extends Component {
             </div> }
             {(this.props.AndroidVideoUrl && this.props.IOSVideoUrl)  && 
             <div className="project-icons-container">
-                 <img className="apple-icon" onClick={this.props.changeVideo('ios').bind(this)} style={(this.state.showVideo === 'android') ? {opacity: 0.4} : {opacity: 1}} src={iphoneIcon} />  
-                 <img className="android-icon" onClick={this.props.changeVideo('android').bind(this)} style={(this.state.showVideo === 'ios') ? {opacity: 0.4} : {opacity: 1}} src={androidIcon} />
+                 <img className="apple-icon" onClick={() => this.changeVideo('ios')} style={(this.state.showVideo === 'android') ? {opacity: 0.4} : {opacity: 1}} src={iphoneIcon} />  
+                 <img className="android-icon" onClick={() => this.changeVideo('android')} style={(this.state.showVideo === 'ios') ? {opacity: 0.4} : {opacity: 1}} src={androidIcon} />
             </div> }
         </div>
     );

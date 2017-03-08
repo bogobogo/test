@@ -15,14 +15,13 @@ const ProjectsDemoAppLink = ({p}) => (
 class Projects extends Component {
   constructor(props){
     super(props)
-    this.state = {width: window.innerWidth}
-    console.log(this.state.width)
+    this.state = {width: window.innerWidth, playing: this.props.projectsData.projectList[0]}
+    console.log(this.props.projectsData.projectList[0])
   }
 
-  changeVideo(os) {
-      return function(){
-        (os === 'android') ?  this.setState({showVideo: 'android'}) :  this.setState({showVideo: 'ios'})
-        }
+  switchVideo(project){
+        console.log(project)
+        this.setState({playing: project})
   }
 
   render() {
@@ -30,46 +29,24 @@ class Projects extends Component {
        <section className="projects-container">
            {this.props.projectsData.projectList.map(project => {
                let p = this.props.projectsData[project];
-               console.log(this.changeVideo);
                return (
-                   <div key={project} className="project">
+                   <div onMouseEnter={() => this.switchVideo(project)} key={project} className="project">
                         <div className='project-text-container'>
                         <h2 className="project-title">{p.title}</h2>
                         <p className="project-description">{p.description}</p>
                         <a className="project-github-link"href={p.github}>View on Github ></a>
-                         {(this.state.width > 450) && <ProjectsDemoAppLink p={p}/>}
+                         {(this.state.width > 500) && <ProjectsDemoAppLink p={p}/>}
                         </div> 
-                        
-                        {(p.AndroidVideoUrl || p.IOSVideoUrl) && <VideoDemo AndroidVideoUrl={p.AndroidVideoUrl} IOSVideoUrl={p.IOSVideoUrl} changeVideo={this.changeVideo}/>} 
-                        {(this.state.width <= 450) && <ProjectsDemoAppLink p={p}/>}
+                        {(p.AndroidVideoUrl || p.IOSVideoUrl) && <VideoDemo project={project} playing={this.state.playing} AndroidVideoUrl={p.AndroidVideoUrl} IOSVideoUrl={p.IOSVideoUrl}/>}
+                        {/*{p.image && <ProjectImage/>}*/}
+                        {(this.state.width <= 500) && <ProjectsDemoAppLink p={p}/>}
                         
                     </div>
                )
            })}
-            
-
        </section>
     );
   }
 }
 
 export default Projects;
-
-{/*<div className="project">
-                <h2 className="project-title">{this.state.project1.title}</h2>
-                <p className="project-description">{this.state.project1.description}</p>
-                <a className="project-github-link"href={this.state.project1.github}>View on Github ></a>
-                <img className="project-video" src={androidImage}/>
-            </div>
-            <div className="project">
-                <h2 className="project-title">{this.state.project1.title}</h2>
-                <p className="project-description">{this.state.project1.description}</p>
-                <a className="project-github-link"href={this.state.project1.github}>View on Github ></a>
-                <img className="project-video" src={androidImage}></img>
-            </div>
-           <div className="project">
-                <h2 className="project-title">{this.state.project1.title}</h2>
-                <p className="project-description">{this.state.project1.description}</p>
-                <a className="project-github-link"href={this.state.project1.github}>View on Github ></a>
-                <img className="project-video" src={androidImage}></img>
-            </div>*/}

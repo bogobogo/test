@@ -1,3 +1,7 @@
+/** {
+    border: 1px solid black;
+}*/
+
 body {
     font-size: 15px;
     font-weight: normal;
@@ -9,16 +13,27 @@ a {
 }
 
 header {
-    width: 70%;
-    margin-left: 15%;
     padding-left: 15px;
     padding-top: 10px;
 }
-@media screen and (max-width: 42em) { 
+
+@media screen and (max-width: 700px) { 
    header {
     width: 50%;
     margin-left:25%;
-}     
+    }     
+}
+@media screen and (min-width: 700px) and (max-width: 1300px) { 
+   header {
+    width: 700px;
+    margin: 10px auto;
+    }     
+}
+@media screen and (min-width: 1300px) { 
+   header {
+    width: 1256px;
+    margin: 10px auto;
+    }     
 }
 
 /* <---- Header ---> */
@@ -35,32 +50,24 @@ header {
 		.wix-page-header {
 			padding-top: 1rem;
 			padding-bottom: 1rem; } 
-         .wix-page-container {
+        .header-title-container {
              /*text-align: center;*/
-             width:70%;
-             margin-left: 15%;
+             width:64%;
+             margin-left: 18%;
              padding-left: 15px;
-              text-align: center;
+            text-align: center;
          }   
-            }
+    }
+
 	@media screen and (min-width: 42em) and (max-width: 64em) {
 		.wix-page-header {
 			padding: 3rem 4rem; } }
 	@media screen and (max-width: 42em) {
 		.wix-page-header {
 			padding: 2rem 1rem; } 
-        .wix-page-container {
+        .header-title-container {
              width: 100%;
          }    
-            }
-
-.wix-page-header .dash-image-div {
-	margin-bottom: 20px;
-}
-    @media screen and (max-width: 42em) {
-        .wix-page-header .dash-image {
-	        width: 80%;
-        }
     }
 
 .top-title {
@@ -117,37 +124,44 @@ header {
     .projects-container {
     width: 100%;
     }}
-    @media screen and (min-width: 42em) and (max-width: 64em) {
+    @media screen and (min-width: 700px) and (max-width: 1300px) {
         .projects-container {
             justify-content: center;
         }
     }
-    @media screen and (min-width: 42em) {
+    @media screen and (min-width: 1300px) {
 		.projects-container {
-			width: 70%;
-            margin-left: 15%; } }
-
-.small-project {
-
-}
+			width: 1256px;
+            margin: 0 auto; } }
 
 .project {
     background-color: rgb(249,247,247); 
     display: flex; 
     vertical-align: top; 
-    padding: 5px 16px; 
+    padding: 8px 16px;
+    padding-right: 0; 
     margin-top: 30px; 
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     flex-wrap: wrap;
+    width: 47%;
     
 }
 
-    @media screen and (max-width: 42em) {
-    .project {
-    width: 100%;
-    justify-content: center;
-    
-    } }
+    @media screen and (max-width: 700px) {
+        .project {
+        width: 100%;
+        justify-content: center;
+        
+        } }
+    @media screen and (min-width: 700px) and (max-width: 1300px) {
+        .project {
+            width: 700px;
+            margin: 15px auto;
+        }
+    }
+
+   
+
 .project-text-container{
     width: 50%;
 }
@@ -158,51 +172,82 @@ header {
 }
 .project-icons-container {
     flex:1;
-    margin-left: 35%;
-    width:30%;
-    padding: 5px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-    @media screen and (min-width: 42em) {
-		.project {
-			width: 47%;
-            min-width: 540px; }
+.apple-icon {
+    cursor: pointer;
+    width: 30px;
+    flex: 1;
+}
+
+.android-icon {
+    cursor: pointer;
+    width: 30px;
+    flex: 1;
+}
+    @media screen and (min-width: 700px) {
+		
         .project-text-container{
              width: 45%;
              margin-left: 2.5%;
             }
-        .project-media-container{
-            width: 45%;
-            margin-left: 2.5%;
+        .project-media-container{ 
+            width: 50%;
+            flex-direction: row-reverse;
             }
              
        .project-demoapp-links-container{
             margin-top: 40px;
             justify-content: none;
             }
-        .project-icons-container {
-            width: auto;
-            margin-left: 105px;
-            }
+        
         .project-video-div {
-            margin-left: 20px;
+            float: right;
             }
         }
+        .project-icons-container {
+            width: 20px;
+            margin-top: 60%;
+            float: right;
+            }
+        .android-icon {
+            cursor: pointer;
+            width: 30px;
+            flex: 1;
+            margin-top: 5px;
+        }
+    @media screen and (min-width: 700px) and (max-width: 1300px) {
+        .project-icons-container {
+            width: 20px;
+            margin-top: 50%;
+            float: right;
+            }
+    }
 
-    @media screen and (max-width: 42em) {
+    @media screen and (max-width: 700px) {
         .project-text-container{
             width: auto;
         }
         .project-media-container {
             
         }
+        .project-icons-container {
+            margin-left: 35%;
+            width:30%;
+            margin-top: auto;
+            float: none;
+            padding: 5px;
+        }
         .project-demoapp-links-container{
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: auto;
-            
+            margin-top: auto;   
+        }
+        .project-video-div {
+        margin-top: 15px;
+        margin-bottom: 10px;
         }
 }
 .project-title {
@@ -231,17 +276,7 @@ header {
     }
 }
 
-.apple-icon {
-    cursor: pointer;
-    width: 30px;
-    flex: 1;
-}
 
-.android-icon {
-    cursor: pointer;
-    width: 30px;
-    flex: 1;
-}
 
 .iphone-mock-img {
     background-image: url("./img/iphone-mock.png");
@@ -257,10 +292,7 @@ header {
 .download-demo-title {
     display: block;
 }
-.project-video-div {
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
+
 .project-video-iphone {
     position: relative;
     top: 48px;
@@ -270,8 +302,6 @@ header {
     position: relative;
     top: 31px;
     left:14px;
-}
-@media screen and (max-width: 42em) {  
 }
 
 

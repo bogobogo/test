@@ -14,11 +14,11 @@ class Header extends Component {
            <header>
                 <img src={logo} className="main-logo"/>
             </header>
-            <div className="wix-page-container">
+            <div className="header-title-container">
              
             
             <h1 className="top-title">Mobile Open Source</h1>
-            <h2 className="project-tagline">We Are Contributing All of Our React Native Stack to the Community. <br/> All MIT. All Maintained.</h2>
+            <h2 className="project-tagline">All MIT. All Maintained.</h2>
         </div>
         </section>
          
