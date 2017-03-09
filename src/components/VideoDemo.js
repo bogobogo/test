@@ -11,11 +11,15 @@ class VideoDemo extends Component {
   }
 
   componentDidMount() {
-      ((this.props.playing == this.props.project) && !this.state.mobile) ? this.playVideo() : this.pauseVideo()
+      if (!this.state.mobile) {
+      (this.props.playing == this.props.project) ? this.playVideo() : this.pauseVideo()
+      }
   }
 
   componentDidUpdate() {
-      ((this.props.playing == this.props.project) && !this.state.mobile) ? this.playVideo() : this.pauseVideo()
+      if (!this.state.mobile) {
+        (this.props.playing == this.props.project) ? this.playVideo() : this.pauseVideo()
+      }
   }
   changeVideo(os) {
         (os === 'android') ?  this.setState({showVideo: 'android'}) :  this.setState({showVideo: 'ios'})
@@ -31,7 +35,6 @@ class VideoDemo extends Component {
   render() {
     return (
         <div className="project-media-container">
-            
             {(this.props.IOSVideoUrl) ? 
             <div className="project-video-div" style={(this.state.showVideo === 'ios') ? styles.iphoneMockImg : styles.androidMockImg}>
             <video playsInline={true} ref="vidRef" className={"project-video-iphone"} height="320" width="180"  muted="" loop={true} autoPlay>
@@ -67,5 +70,5 @@ const styles = {
         background: `url(${androidMock}) no-repeat top left transparent`
     }
 }
-// (this.state.showVideo) && {opacity: 0.4}
+
 export default VideoDemo;

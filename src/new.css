@@ -90,9 +90,7 @@ header {
 
     @media screen and (max-width: 42em) { 
         .main-logo {
-            width:90%;
-            margin-left: 5%;
-            
+            width:90%; 
         } 
         .top-title {
             width: 90%;
@@ -160,8 +158,6 @@ header {
         }
     }
 
-   
-
 .project-text-container{
     width: 50%;
 }
@@ -169,6 +165,12 @@ header {
     display: flex;
     flex-wrap: wrap;
     
+}
+.project-demoapp-link {
+    margin-right: 5px;
+}
+.project-demoapp-img{
+    width: 110px;
 }
 .project-icons-container {
     flex:1;
@@ -196,7 +198,6 @@ header {
              
        .project-demoapp-links-container{
             margin-top: 40px;
-            flex-wrap: nowrap;
             }
         
         .project-video-div {
@@ -212,6 +213,13 @@ header {
             justify-content: flex-end;
             float: right;
             }
+        .project-demoapp-link {
+            margin-right: 5px;
+            width: 100%;
+        }
+        .project-title {
+            margin-top: 0;
+        }
         .project-description {
             margin-top: -40px;
         }
@@ -225,6 +233,7 @@ header {
             width: 30px;
             margin-top: 5px;
         }
+        
     @media screen and (min-width: 700px) and (max-width: 1300px) {
         .project-icons-container {
             width: 20px;
@@ -254,6 +263,9 @@ header {
             justify-content: center;
             margin-top: auto;   
         }
+        .project-demoapp-link {
+             width: auto;
+        }
         .project-video-div {
         margin-top: 15px;
         margin-bottom: 10px;
@@ -268,6 +280,13 @@ header {
             cursor: pointer;
             width: 30px;
             flex: 1;
+        }
+        .download-demo-title-container {
+            width:100%;
+        }
+        .download-demo-title {
+            text-align: center;
+            font-family: 'HelveticaNeueW01-45Ligh';
         }
 }
 .project-title {
@@ -308,11 +327,10 @@ header {
     background-image: url("./img/iphone-mock.png");
 }
 
-.project-demoapp-link {
-    margin-right: 5px;
-}
+
 .download-demo-title {
     display: block;
+    font-family: 'HelveticaNeueW01-45Ligh';
 }
 
 .project-video-iphone {

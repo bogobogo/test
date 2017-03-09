@@ -7,8 +7,9 @@ import ProjectImage from './ProjectImage'
 
 const ProjectsDemoAppLink = ({p}) => (
         <div className="project-demoapp-links-container"> 
-            {p.AndroidDemoAppLink && <a className="project-demoapp-link" href="#"><img src={appStoreBadge}></img></a>}
-            {p.IOSDemoAppLink && <a className="project-demoapp-link" href="#"><img src={playStoreBadge}></img></a>}
+            {(p.AndroidDemoAppLink || p.IOSDemoAppLink) && <div className="download-demo-title-container"><h5 className="download-demo-title"> Download Demo </h5></div>}
+            {p.AndroidDemoAppLink && <a className="project-demoapp-link" href="#"><img className="project-demoapp-img" src={appStoreBadge}></img></a>}
+            {p.IOSDemoAppLink && <a className="project-demoapp-link" href="#"><img className="project-demoapp-img" src={playStoreBadge}></img></a>}
         </div>  
     )
 
@@ -41,7 +42,6 @@ class Projects extends Component {
                         {(p.AndroidVideoUrl || p.IOSVideoUrl) && <VideoDemo project={project} playing={this.state.playing} AndroidVideoUrl={p.AndroidVideoUrl} IOSVideoUrl={p.IOSVideoUrl}/>}
                         {(p.Image && (!(p.AndroidVideoUrl || p.IOSVideoUrl))) && <ProjectImage/>}
                         {(this.state.width <= 500) && <ProjectsDemoAppLink p={p}/>}
-                        
                     </div>
                )
            })}

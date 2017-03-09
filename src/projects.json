@@ -17,7 +17,7 @@
         "AndroidVideoUrl": "something",
         "IOSVideoUrl": "https://wix.github.io/react-native//assets/themes/bootstrap-3/components/images/declerative/oneapp-navigation-movie.mp4",
         "IOSDemoAppLink": "",
-        "Image": "s",
+        "Image": "",
         "AndroidDemoAppLink": ""
     },
     "project3": {
@@ -25,9 +25,9 @@
         "description": "Advanced native camera control with pre-defined aspect ratio, crop and more",
         "github": "https://github.com/wix/react-native-camera-kit",
         "AndroidVideoUrl": "",
-        "IOSVideoUrl": "",
+        "IOSVideoUrl": "sd",
         "IOSDemoAppLink": "sd",
-        "Image": "s",
+        "Image": "",
         "AndroidDemoAppLink": ""
     },
     "project4": {
@@ -37,7 +37,7 @@
         "AndroidVideoUrl": "",
         "IOSVideoUrl": "as",
         "IOSDemoAppLink": "",
-        "Image": "s",
+        "Image": "",
         "AndroidDemoAppLink": ""
     },
     "project5": {
