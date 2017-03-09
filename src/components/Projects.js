@@ -3,6 +3,7 @@ import androidImage from '../img/android-camera.png'
 import appStoreBadge from '../img/app-store-badge.svg'
 import playStoreBadge from '../img/google-play-badge.svg'
 import VideoDemo from './VideoDemo.js'
+import ProjectImage from './ProjectImage'
 
 const ProjectsDemoAppLink = ({p}) => (
         <div className="project-demoapp-links-container"> 
@@ -38,7 +39,7 @@ class Projects extends Component {
                          {(this.state.width > 500) && <ProjectsDemoAppLink p={p}/>}
                         </div> 
                         {(p.AndroidVideoUrl || p.IOSVideoUrl) && <VideoDemo project={project} playing={this.state.playing} AndroidVideoUrl={p.AndroidVideoUrl} IOSVideoUrl={p.IOSVideoUrl}/>}
-                        {/*{p.image && <ProjectImage/>}*/}
+                        {(p.Image && (!(p.AndroidVideoUrl || p.IOSVideoUrl))) && <ProjectImage/>}
                         {(this.state.width <= 500) && <ProjectsDemoAppLink p={p}/>}
                         
                     </div>

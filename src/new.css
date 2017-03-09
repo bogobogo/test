@@ -71,7 +71,7 @@ header {
     }
 
 .top-title {
-	font-family: 'Helvetica Neue';
+	font-family: 'HelveticaNeueW01-UltLt';
 	font-size: 84px;
 	margin-top: 72px;
 	letter-spacing: 3px;
@@ -79,7 +79,7 @@ header {
 }
 
 .project-tagline {
-	font-family: 'Helvetica Neue' ,sans-serif;
+	font-family: 'HelveticaNeueW01-UltLt' ,sans-serif;
 	font-size: 24px;
 	font-weight: 100;
 	margin-top: 40px;
@@ -138,10 +138,9 @@ header {
     background-color: rgb(249,247,247); 
     display: flex; 
     vertical-align: top; 
-    padding: 8px 16px;
+    padding: 24px;
     padding-right: 0; 
     margin-top: 30px; 
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     flex-wrap: wrap;
     width: 47%;
     
@@ -150,7 +149,7 @@ header {
     @media screen and (max-width: 700px) {
         .project {
         width: 100%;
-        padding-right: 8px;
+        padding: 8px 16px;
         justify-content: center;
         
         } }
@@ -177,22 +176,18 @@ header {
     align-items: center;
     justify-content: center;
 }
-.apple-icon {
-    cursor: pointer;
-    width: 30px;
-    flex: 1;
+
+.project-description {
+    font-family: 'HelveticaNeueW01-45Ligh';
 }
 
-.android-icon {
-    cursor: pointer;
-    width: 30px;
-    flex: 1;
-}
     @media screen and (min-width: 700px) {
 		
         .project-text-container{
              width: 45%;
-             margin-left: 2.5%;
+             display: flex;
+             flex-direction: column;
+             justify-content: space-between;
             }
         .project-media-container{ 
             width: 50%;
@@ -201,22 +196,33 @@ header {
              
        .project-demoapp-links-container{
             margin-top: 40px;
-            justify-content: none;
+            flex-wrap: nowrap;
             }
         
         .project-video-div {
             float: right;
+            margin-right: -25px;
             }
         }
         .project-icons-container {
             width: 20px;
-            margin-top: 60%;
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: flex-end;
             float: right;
             }
+        .project-description {
+            margin-top: -40px;
+        }
+        .apple-icon {
+            cursor: pointer;
+            width: 30px;
+            
+        }
         .android-icon {
             cursor: pointer;
             width: 30px;
-            flex: 1;
             margin-top: 5px;
         }
     @media screen and (min-width: 700px) and (max-width: 1300px) {
@@ -229,7 +235,7 @@ header {
 
     @media screen and (max-width: 700px) {
         .project-text-container{
-            width: auto;
+            width: 100%;
         }
         .project-media-container {
             
@@ -239,6 +245,8 @@ header {
             width:30%;
             margin-top: auto;
             float: none;
+            height: auto;
+            flex-direction: row;
             padding: 5px;
         }
         .project-demoapp-links-container{
@@ -250,26 +258,39 @@ header {
         margin-top: 15px;
         margin-bottom: 10px;
         }
+        .apple-icon {
+            cursor: pointer;
+            width: 30px;
+            flex: 1;
+        }
+
+        .android-icon {
+            cursor: pointer;
+            width: 30px;
+            flex: 1;
+        }
 }
 .project-title {
-
+    font-family: 'Helvetica Neue';
+    letter-spacing: 2px;
+    font-size: 30px;
 }
 
-.project-description {
-
-}
 
 .project-github-link {
     display: block;
     margin-bottom: 20px;
+    color: #733CA6;
 }
 @media screen and (max-width: 42em) {
     .project-title {
         text-align: center;
+        font-size: 24px;
     }
 
     .project-description {
         text-align: center;
+        margin-top: auto;
     }
 
     .project-github-link {
@@ -288,7 +309,7 @@ header {
 }
 
 .project-demoapp-link {
-    margin: 5px;
+    margin-right: 5px;
 }
 .download-demo-title {
     display: block;

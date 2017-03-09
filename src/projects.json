@@ -1,12 +1,13 @@
 {
-    "projectList": ["project1", "project2", "project3", "project4"],
+    "projectList": ["project1", "project2", "project3", "project4", "project5"],
     "project1": {
         "description": "App-wide support for 100% native navigation with an easy cross-platform interface.",
         "title": "React Native Navigation",
         "github": "https://github.com/wix/react-native-navigation",
-        "AndroidVideoUrl": "asd",
+        "AndroidVideoUrl": "",
         "IOSVideoUrl": "https://storage.googleapis.com/legati-app.appspot.com/react-native-interactable-720.mov",
         "IOSDemoAppLink": "https://storage.googleapis.com/legati-app.appspot.com/react-native-interactable-720.mov",
+        "Image": "s",
         "AndroidDemoAppLink": "something"
     },
     "project2": {
@@ -16,15 +17,17 @@
         "AndroidVideoUrl": "something",
         "IOSVideoUrl": "https://wix.github.io/react-native//assets/themes/bootstrap-3/components/images/declerative/oneapp-navigation-movie.mp4",
         "IOSDemoAppLink": "",
+        "Image": "s",
         "AndroidDemoAppLink": ""
     },
     "project3": {
         "title": "React Native Camera Kit",
         "description": "Advanced native camera control with pre-defined aspect ratio, crop and more",
         "github": "https://github.com/wix/react-native-camera-kit",
-        "AndroidVideoUrl": "something",
-        "IOSVideoUrl": "something",
+        "AndroidVideoUrl": "",
+        "IOSVideoUrl": "",
         "IOSDemoAppLink": "sd",
+        "Image": "s",
         "AndroidDemoAppLink": ""
     },
     "project4": {
@@ -34,6 +37,17 @@
         "AndroidVideoUrl": "",
         "IOSVideoUrl": "as",
         "IOSDemoAppLink": "",
+        "Image": "s",
+        "AndroidDemoAppLink": ""
+    },
+    "project5": {
+        "description" : "Handle all the aspects of push notifications for your app, including remote and local notifications, interactive notifications, silent notifications, and more.",
+        "title": "React Native Notifications",
+        "github": "https://github.com/wix/react-native-notifications",
+        "AndroidVideoUrl": "something",
+        "IOSVideoUrl": "https://wix.github.io/react-native//assets/themes/bootstrap-3/components/images/declerative/oneapp-navigation-movie.mp4",
+        "IOSDemoAppLink": "",
+        "Image": "s",
         "AndroidDemoAppLink": ""
     }
 

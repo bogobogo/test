@@ -7,15 +7,15 @@ import iphoneIcon from '../img/apple-black-icon.svg'
 class VideoDemo extends Component {
   constructor(props){
     super(props)
-    this.state = { showVideo: 'ios'}
+    this.state = { showVideo: 'ios', mobile: (window.innerWidth < 500)}
   }
 
   componentDidMount() {
-      (this.props.playing == this.props.project) ? this.playVideo() : this.pauseVideo()
+      ((this.props.playing == this.props.project) && !this.state.mobile) ? this.playVideo() : this.pauseVideo()
   }
 
   componentDidUpdate() {
-      (this.props.playing == this.props.project) ? this.playVideo() : this.pauseVideo()
+      ((this.props.playing == this.props.project) && !this.state.mobile) ? this.playVideo() : this.pauseVideo()
   }
   changeVideo(os) {
         (os === 'android') ?  this.setState({showVideo: 'android'}) :  this.setState({showVideo: 'ios'})
@@ -34,13 +34,13 @@ class VideoDemo extends Component {
             
             {(this.props.IOSVideoUrl) ? 
             <div className="project-video-div" style={(this.state.showVideo === 'ios') ? styles.iphoneMockImg : styles.androidMockImg}>
-            <video playsinline ref="vidRef" className={"project-video-iphone"} height="320" width="180"  muted="" loop={true}>
+            <video playsInline={true} ref="vidRef" className={"project-video-iphone"} height="320" width="180"  muted="" loop={true} autoPlay>
             <source src={(this.state.showVideo === 'ios') ? this.props.IOSVideoUrl : this.props.AndroidVideoUrl} type="video/mp4"/>
                 Your browser does not support the video tag.
             </video>
             </div>
              : <div  className="project-video-div" style={styles.androidMockImg}>
-            <video playsinline ref="vidRef" className="project-video-android" height="320" width="180"  muted="" loop={true}>
+            <video playsInline={true} ref="vidRef"  className="project-video-android" height="320" width="180"  muted="" loop={true} autoPlay>
             <source src={this.props.AndroidVideoUrl} type="video/mp4"/>
                 Your browser does not support the video tag.
             </video>
