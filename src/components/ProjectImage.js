@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import androidBlog from '../img/android-blog.png'
+import androidBlog from '../img/iphone-mock.png'
 
 class ProjectImage extends Component {
   constructor(props){
