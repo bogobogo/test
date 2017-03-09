@@ -19,11 +19,17 @@ class Projects extends Component {
     super(props)
     this.state = {width: window.innerWidth, playing: this.props.projectsData.projectList[0]}
     console.log(this.props.projectsData.projectList[0])
+    window.addEventListener("orientationchange", this.updateStateOnOrientation.bind(this))
   }
 
   switchVideo(project){
         console.log(project)
         this.setState({playing: project})
+  }
+
+  updateStateOnOrientation(){
+    console.log('orientation change')
+    this.setState({width: window.innerWidth})
   }
 
   render() {
