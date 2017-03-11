@@ -9,8 +9,8 @@ import MacVideoDemo from './MacVideoDemo'
 const ProjectsDemoAppLink = ({p}) => (
         <div className="project-demoapp-links-container"> 
             {(p.AndroidDemoAppLink || p.IOSDemoAppLink) && <div className="download-demo-title-container"><h5 className="download-demo-title"> Download Demo </h5></div>}
-            {p.IOSDemoAppLink && <a className="project-demoapp-link" href="#"><img className="project-demoapp-img" src={appStoreBadge}></img></a>}
-            {p.AndroidDemoAppLink && <a className="project-demoapp-link" href="#"><img className="project-demoapp-img" src={playStoreBadge}></img></a>}
+            {p.IOSDemoAppLink && <a className="project-demoapp-link" href={p.IOSDemoAppLink}><img className="project-demoapp-img" src={appStoreBadge}></img></a>}
+            {p.AndroidDemoAppLink && <a className="project-demoapp-link" href={p.AndroidDemoAppLink}><img className="project-demoapp-img" src={playStoreBadge}></img></a>}
         </div>  
     )
 

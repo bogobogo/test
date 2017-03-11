@@ -184,8 +184,8 @@ header {
             width: 100%;
         }
         .big-project-video-div {
-            width: 80%;
-            height: 135px;
+            width: 320px;
+            height: 200px;
             margin: 0 auto;
         }}
         
@@ -193,6 +193,14 @@ header {
         .project {
             width: 700px;
             margin: 15px auto;
+        }
+        .big-project-video-div {
+            height: 295px;
+            width: 480px;
+            margin: 0 auto;
+        }
+        .big-project {
+            width: 700px;
         }
     }
 
