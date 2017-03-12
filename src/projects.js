@@ -1,5 +1,7 @@
-{
-    "projectList": [ "project1", "project5", "project4", "project3", "project2"],
+import navigationPoster from './img/react-native-navigation-poster.jpg'
+
+const projects = {
+    "projectList": [ "project5", "project1", "project4", "project3", "project2"],
     "project5": {
         "description" : "Declarative API for handling fluid user interactions with views at 60 FPS in React Native",
         "title": "React Native Interactable",
@@ -19,6 +21,7 @@
         "IOSVideoUrl": "https://wix.github.io/react-native//assets/themes/bootstrap-3/components/images/declerative/oneapp-navigation-movie.mp4",
         "IOSDemoAppLink": "",
         "Image": "",
+        "poster": navigationPoster,
         "size" : "normal",
         "AndroidDemoAppLink": ""
     },
@@ -57,3 +60,4 @@
         "AndroidDemoAppLink": ""
     }
 }
+export default projects

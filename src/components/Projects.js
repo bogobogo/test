@@ -22,7 +22,6 @@ class Projects extends Component {
     console.log(this.props.projectsData.projectList[0])
     window.addEventListener("orientationchange", this.updateStateOnOrientation.bind(this))
   }
-
   switchVideo(project){
         console.log(project)
         this.setState({playing: project})
@@ -47,7 +46,7 @@ class Projects extends Component {
                         <div className="project-github-link"><a className="project-github-link" href={p.github}>View on Github > </a></div>
                          {(this.state.width > 700) && <ProjectsDemoAppLink p={p}/>}
                         </div> 
-                        {(p.AndroidVideoUrl || p.IOSVideoUrl) && <VideoDemo project={project} size="normal" playing={this.state.playing} AndroidVideoUrl={p.AndroidVideoUrl} IOSVideoUrl={p.IOSVideoUrl}/>}
+                        {(p.AndroidVideoUrl || p.IOSVideoUrl) && <VideoDemo project={project} size="normal" poster={p.poster} playing={this.state.playing} AndroidVideoUrl={p.AndroidVideoUrl} IOSVideoUrl={p.IOSVideoUrl}/>}
                         {(p.Image && (!(p.AndroidVideoUrl || p.IOSVideoUrl))) && <ProjectImage/>}
                         {(this.state.width <= 700) && <ProjectsDemoAppLink p={p}/>}
                     </div>
@@ -59,7 +58,7 @@ class Projects extends Component {
                         <div className="project-github-link"><a className="project-github-link" href={p.github}>View on Github > </a></div>
                          {(this.state.width > 700) && <ProjectsDemoAppLink p={p}/>}
                         </div> 
-                        <MacVideoDemo  project={project} playing={this.state.playing} MacVideoUrl={p.MacVideoUrl}/>
+                        <MacVideoDemo  project={project} poster={p.poster} playing={this.state.playing} MacVideoUrl={p.MacVideoUrl}/>
                         {(this.state.width <= 700) && <ProjectsDemoAppLink p={p}/>}
                     </div>)
                }

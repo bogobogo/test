@@ -45,7 +45,7 @@ class MacVideoDemo extends Component {
     return (
         <div className="big-project-media-container">
             <div className="big-project-video-div" >
-            <video playsInline={true} ref="vidRef"  className="big-project-video" height="360" width="620"  muted loop={true}>
+            <video playsInline={true} ref="vidRef"  className="big-project-video" height="360" width="620"  muted loop={true} autoPlay>
             <source src={this.props.MacVideoUrl} type="video/mp4"/>
                 Your browser does not support the video tag.
             </video>
