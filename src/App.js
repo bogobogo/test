@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import styled from 'styled-components'
 import 'bootstrap/dist/css/bootstrap.css'
 import './new.css';
@@ -13,7 +14,7 @@ import projects from './projects.json'
 class App extends Component {
   render() {
     return (
-      <div >
+      <div>
         <Header/>
         <Projects projectsData={projects}/>
         {/*<Footer/>*/}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import macMockImg from '../img/MacMock.png'
-
+import ReactDOM from 'react-dom';
+import { throttle } from 'lodash'
 
 class MacVideoDemo extends Component {
   constructor(props){
@@ -8,12 +9,20 @@ class MacVideoDemo extends Component {
     this.state = { showVideo: 'ios', mobile: (window.innerWidth < 700)}
   }
 
-  componentDidMount() {
-      if (!this.state.mobile) {
-      (this.props.playing == this.props.project) ? this.playVideo() : this.pauseVideo()
-    } else {
-        this.playVideo()
+  componentDidMount() { 
+    (this.props.playing == this.props.project) ? this.playVideo() : this.pauseVideo()
+    if (this.state.mobile) {
+        window.addEventListener('scroll', throttle(this._handleScroll.bind(this), 200))  
     }
+  }
+  _handleScroll(){
+    console.log('scrollhandle')
+    let topPosition = ReactDOM.findDOMNode(this.refs.vidRef).getBoundingClientRect().top
+      if ( topPosition < 400 && topPosition > -100) {
+            this.playVideo()
+      } else {
+          this.pauseVideo()
+      }
   }
 
   componentDidUpdate() {
@@ -36,7 +45,7 @@ class MacVideoDemo extends Component {
     return (
         <div className="big-project-media-container">
             <div className="big-project-video-div" >
-            <video playsInline={true} ref="vidRef"  className="big-project-video" height="360" width="620"  muted="" loop={true} autoPlay>
+            <video playsInline={true} ref="vidRef"  className="big-project-video" height="360" width="620"  muted loop={true}>
             <source src={this.props.MacVideoUrl} type="video/mp4"/>
                 Your browser does not support the video tag.
             </video>

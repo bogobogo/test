@@ -1,31 +1,40 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import androidMock from '../img/android-mock.png'
 import iphoneMock from '../img/iphone-mock.png'
 import androidIcon from '../img/android-black-icon.svg'
 import iphoneIcon from '../img/apple-black-icon.svg'
-
+import { throttle } from 'lodash'
 
 class VideoDemo extends Component {
   constructor(props){
     super(props)
-    this.state = { showVideo: 'ios', mobile: (window.innerWidth < 700)}
+    this.state = { showVideo: 'ios', mobile: (window.innerWidth < 740), playing: false, scrollPosition: 0}
   }
 
-  componentDidMount() {
-      if (!this.state.mobile) {
-      (this.props.playing == this.props.project) ? this.playVideo() : this.pauseVideo()
-    } else {
-        this.playVideo()
+  componentDidMount() { 
+    (this.props.playing == this.props.project) ? this.playVideo() : this.pauseVideo()
+    if (this.state.mobile) {
+        window.addEventListener('scroll', throttle(this._handleScroll.bind(this), 200))  
     }
   }
-
+  _handleScroll(){
+    console.log('scrollhandle')
+    let topPosition = ReactDOM.findDOMNode(this.refs.vidRef).getBoundingClientRect().top
+      if ( topPosition < 400 && topPosition > -100) {
+            this.playVideo()
+      } else {
+          this.pauseVideo()
+      }
+  }
   componentDidUpdate() {
       if (!this.state.mobile) {
         (this.props.playing == this.props.project) ? this.playVideo() : this.pauseVideo()
       }
   }
+ 
   changeVideo(os) {
-        (os === 'android') ?  this.setState({showVideo: 'android'}) :  this.setState({showVideo: 'ios'})
+    (os === 'android') ?  this.setState({showVideo: 'android'}) :  this.setState({showVideo: 'ios'})
   }
   playVideo() {
     this.refs.vidRef.play()
@@ -37,7 +46,7 @@ class VideoDemo extends Component {
   renderIOSDemo() {
       return (
         <div className="project-video-div" style={(this.state.showVideo === 'ios') ? styles.iphoneMockImg : styles.androidMockImg}>
-            <video playsInline={true} ref="vidRef" className={"project-video-iphone"} height="320" width="180"  muted="" loop={true} autoPlay>
+            <video playsInline={true} ref="vidRef" className={(this.state.showVideo === 'ios') ? "project-video-iphone" : "project-video-android"} height="320" width="180"  muted loop={true}>
             <source src={(this.state.showVideo === 'ios') ? this.props.IOSVideoUrl : this.props.AndroidVideoUrl} type="video/mp4"/>
                 Your browser does not support the video tag.
             </video>
@@ -47,7 +56,7 @@ class VideoDemo extends Component {
   renderAndroidDemo() {
       return (
           <div  className="project-video-div" style={styles.androidMockImg}>
-            <video playsInline={true} ref="vidRef"  className="project-video-android" height="320" width="180"  muted="" loop={true} autoPlay>
+            <video playsInline={true} ref="vidRef"  className="project-video-android" height="320" width="180"  muted loop={true} autoPlay>
             <source src={this.props.AndroidVideoUrl} type="video/mp4"/>
                 Your browser does not support the video tag.
             </video>
@@ -57,7 +66,7 @@ class VideoDemo extends Component {
   render() {
     return (
         <div className="project-media-container">
-            {(this.props.IOSVideoUrl && (this.props.size == "normal")) ? this.renderIOSDemo() :this.renderAndroidDemo()}
+            {(this.props.IOSVideoUrl) ? this.renderIOSDemo() :this.renderAndroidDemo()}
             {}
             {(this.props.AndroidVideoUrl && this.props.IOSVideoUrl)  && 
             <div className="project-icons-container">
