@@ -10,9 +10,9 @@ The source files are hosted in the master branch.
 
 ## Usage
 
-#if you wish to add your project: <br>
+###if you wish to add your project: <br>
 
-* create an "openSourceIsAwesome.json" file in your repo. It should have the following properties:
+create an "openSourceIsAwesome.json" file in your repo. It should have the following properties:
 <br>
 ```
    {
@@ -32,6 +32,6 @@ The source files are hosted in the master branch.
 coming soon...
 <br>
 
-#If you wish to change the design of the project
+###If you wish to change the design of the project
 
 coming soon...
