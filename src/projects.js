@@ -1,4 +1,5 @@
 import navigationPoster from './img/react-native-navigation-poster.jpg'
+import interactablePoster from './img/react-native-interactable-poster.jpg'
 
 const projects = {
     "projectList": [ "project5", "project1", "project4", "project3", "project2"],
@@ -6,10 +7,11 @@ const projects = {
         "description" : "Declarative API for handling fluid user interactions with views at 60 FPS in React Native",
         "title": "React Native Interactable",
         "github": "https://github.com/wix/react-native-interactable",
-        "AndroidVideoUrl": "https://storage.googleapis.com/legati-app.appspot.com/react-native-interactable-720.mov",
+        "AndroidVideoUrl": "https://storage.googleapis.com/legati-app.appspot.com/react-interactable-android.mp4",
         "IOSVideoUrl": "https://storage.googleapis.com/legati-app.appspot.com/react-native-interactable-720.mov",
         "IOSDemoAppLink": "https://itunes.apple.com/us/app/react-native-interactions/id1209875831?mt=8",
         "Image": "",
+        "poster": interactablePoster,
         "size" : "normal",
         "AndroidDemoAppLink": "https://play.google.com/store/apps/details?id=com.wix.interactions&hl=en"
     },

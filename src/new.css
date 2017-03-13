@@ -23,13 +23,13 @@ header {
     margin-left:25%;
     }     
 }
-@media screen and (min-width: 700px) and (max-width: 1300px) { 
+@media screen and (min-width: 700px) and (max-width: 1270px) { 
    header {
     width: 700px;
     margin: 10px auto;
     }     
 }
-@media screen and (min-width: 1300px) { 
+@media screen and (min-width: 1270px) { 
    header {
     width: 1256px;
     margin: 10px auto;
@@ -59,7 +59,7 @@ header {
          }   
     }
 
-	@media screen and (min-width: 700px) and (max-width: 1300px) {
+	@media screen and (min-width: 700px) and (max-width: 1270px) {
 		.wix-page-header {
 			padding: 3rem 4rem; } }
 	@media screen and (max-width: 700px) {
@@ -122,12 +122,12 @@ header {
     .projects-container {
     width: 100%;
     }}
-    @media screen and (min-width: 700px) and (max-width: 1300px) {
+    @media screen and (min-width: 700px) and (max-width: 1270px) {
         .projects-container {
             justify-content: center;
         }
     }
-    @media screen and (min-width: 1300px) {
+    @media screen and (min-width: 1270px) {
 		.projects-container {
 			width: 1256px;
             margin: 0 auto; } }
@@ -157,7 +157,7 @@ header {
 
 .project:hover {
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.1s;
+        transition: 0.3s;
 }
 
 .big-project:hover {
@@ -189,7 +189,7 @@ header {
             margin: 0 auto;
         }}
         
-    @media screen and (min-width: 700px) and (max-width: 1300px) {
+    @media screen and (min-width: 700px) and (max-width: 1270px) {
         .project {
             width: 700px;
             margin: 15px auto;
@@ -298,7 +298,7 @@ header {
             margin-top: 5px;
         }
         
-    @media screen and (min-width: 700px) and (max-width: 1300px) {
+    @media screen and (min-width: 700px) and (max-width: 1270px) {
         .project-icons-container {
             width: 20px;
             float: right;
@@ -362,7 +362,7 @@ header {
 
 .project-github-link {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #733CA6;
 }
 @media screen and (max-width: 700px) {
@@ -388,7 +388,7 @@ header {
 }
 
 .android-mock-img {
-    background-image: url("./img/iphone-mock.png");
+    background-image: url("./img/iphonesvg.svg");
 }
 
 
@@ -399,13 +399,13 @@ header {
 
 .project-video-iphone {
     position: relative;
-    top: 47px;
-    left: 30px;
+    top: 54px;
+    left: 32px;
 }
 .project-video-android {
     position: relative;
-    top: 48px;
-    left:27px;
+    top: 54px;
+    left: 33px;
 }
 .big-project-video {
     position: relative;
@@ -427,11 +427,21 @@ header {
     align-items: center;
     display: block;
     margin: auto;
-    width: 70%;
+    
     justify-content: center;
     flex-wrap: wrap;
 }
+@media screen and (max-width:700px) {
 
+}
+@media screen and (min-width:700px) and (max-width:1270px) {
+    
+}
+@media screen and  (min-width:1270px) {
+    .footer-container {
+        width: 1256px;
+    }
+}
 .wix-footer {
 	display: -webkit-flex; /* Safari */
 	-webkit-flex-direction: row; /* Safari 6.1+ */
@@ -441,7 +451,7 @@ header {
 
 	flex-wrap: wrap;
 
-	margin: 20px;
+	margin: 10px;
 	padding-top: 70px;
 	padding-bottom: 70px;
 }
@@ -494,7 +504,6 @@ header {
 
 .links-list a {
 	color: black;
-	font-family: 'Helvetica Neue Thin';
 }
 
 .links-list a:hover {
@@ -512,7 +521,6 @@ header {
 	margin-top: 10px;
 	color: black;
 	opacity: 100%;
-	font-family: 'Helvetica Neue Thin';
 }
 
 .wix-footer .email-container {
@@ -521,7 +529,34 @@ header {
 	flex-direction: column;
 	flex: 1;
 }
-
+@media screen and (max-width:1260px) {
+    .wix-footer {
+        padding-top:20px;
+        padding-bottom: 20px;
+    }
+    .wix-footer .subscribe-container {
+        display: none;
+        }
+    .wix-footer .footer-links-container {
+        display: none;
+    }
+    .links-list {
+	list-style-type: none;
+	margin: 0px;
+    text-align: center;
+    }
+    .wix-footer .email-container {
+	text-align: center;
+    }
+    
+}
+@media screen and (max-width:1260px) and (min-width: 700px) {
+    .wix-footer .email-container {
+        width: 500px;
+        margin: 0 auto;
+        flex: none;
+    }
+}
 
 
 

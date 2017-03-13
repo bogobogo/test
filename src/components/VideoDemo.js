@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import androidMock from '../img/android-mock.png'
-import iphoneMock from '../img/iphone-mock.png'
+import androidMock from '../img/androidsvg.svg'
+import iphoneMock from '../img/iphonesvg.svg'
 import androidIcon from '../img/android-black-icon.svg'
 import iphoneIcon from '../img/apple-black-icon.svg'
 import poster from '../img/react-native-navigation-poster.jpg'
@@ -35,6 +35,7 @@ class VideoDemo extends Component {
   }
  
   changeVideo(os) {
+    
     (os === 'android') ?  this.setState({showVideo: 'android'}) :  this.setState({showVideo: 'ios'})
   }
   playVideo() {
@@ -47,8 +48,8 @@ class VideoDemo extends Component {
   renderIOSDemo() {
       return (
         <div className="project-video-div" style={(this.state.showVideo === 'ios') ? styles.iphoneMockImg : styles.androidMockImg}>
-            <video playsInline={true} ref="vidRef" className={(this.state.showVideo === 'ios') ? "project-video-iphone" : "project-video-android"} poster={this.props.poster} height="320" width="180"  muted loop={true} >
-            <source src={(this.state.showVideo === 'ios') ? this.props.IOSVideoUrl : this.props.AndroidVideoUrl} type="video/mp4"/>
+            <video playsInline={true} src={(this.state.showVideo === 'ios') ? this.props.IOSVideoUrl : this.props.AndroidVideoUrl} ref="vidRef" className={(this.state.showVideo === 'ios') ? "project-video-iphone" : "project-video-android"} poster={this.props.poster} height="320" width="180"  muted loop={true} >
+            {/*<source src={(this.state.showVideo === 'ios') ? this.props.IOSVideoUrl : this.props.AndroidVideoUrl} type="video/mp4"/>*/}
                 Your browser does not support the video tag.
             </video>
         </div>
@@ -82,13 +83,13 @@ class VideoDemo extends Component {
 const styles = {
     iphoneMockImg : {
         width: 243,
-        height: 417,
-        background: `url(${iphoneMock}) no-repeat top left transparent`   
+        height: 426,
+        background: `url(${iphoneMock}) no-repeat top transparent`   
     },
     androidMockImg: {
         width: 243,
-        height: 417,
-        background: `url(${androidMock}) no-repeat top left transparent`
+        height: 426,
+        background: `url(${androidMock}) no-repeat top  transparent`
     }
 }
 
