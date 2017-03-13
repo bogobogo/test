@@ -11,8 +11,9 @@ The source files are hosted in the master branch.
 ## Usage
 
 if you wish to add your project: <br>
-* create an "openSourceIsAwesome.json" file in your repo. It should have the following properties: <br>
-   ```
+* create an "openSourceIsAwesome.json" file in your repo. It should have the following properties:
+<br>
+```
    {
         "name": "your repository name" (required),    
         "description": "App-wide support for 100% native navigation with an easy cross-platform interface." (required),    
@@ -24,7 +25,8 @@ if you wish to add your project: <br>
         "AndroidDemoAppLink": "link to your demo app on the play store" (optional: add if you have a demoapp on the app store),    
         "Image": "link to image" (required with dimensions 243 × 417, but only if you have no videos to display)  
     }
-    ```
+```
+<br>
 If you wish to make change to the *design* of the website:
 * clone the repo
 * make your changes
