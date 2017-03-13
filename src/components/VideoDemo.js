@@ -32,11 +32,14 @@ class VideoDemo extends Component {
       if (!this.state.mobile) {
         (this.props.playing == this.props.project) ? this.playVideo() : this.pauseVideo()
       }
+      if (this.state.mobile) {
+          this.playVideo()
+      }
   }
  
   changeVideo(os) {
-    
     (os === 'android') ?  this.setState({showVideo: 'android'}) :  this.setState({showVideo: 'ios'})
+    
   }
   playVideo() {
     this.refs.vidRef.play()
