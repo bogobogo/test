@@ -3,8 +3,8 @@
 ## About
 
 This repository hosts the Wix mobile open source website.
-The minified code that runs the website can be found in the gh-pages branch.
-The source files are in the master branch.
+The production code is hosted in the gh-pages branch.
+The source files are hosted in the master branch.
 
 ## Usage
 
