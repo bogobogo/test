@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.010adcf7.css",
-  "main.css.map": "static/css/main.010adcf7.css.map",
-  "main.js": "static/js/main.c1b897be.js",
-  "main.js.map": "static/js/main.c1b897be.js.map",
+  "main.css": "static/css/main.9aef2214.css",
+  "main.css.map": "static/css/main.9aef2214.css.map",
+  "main.js": "static/js/main.d31c126e.js",
+  "main.js.map": "static/js/main.d31c126e.js.map",
   "static/media/android-black-icon.svg": "static/media/android-black-icon.3677a603.svg",
   "static/media/android-camera.png": "static/media/android-camera.acb0f6af.png",
   "static/media/androidsvg.svg": "static/media/androidsvg.ead6d36f.svg",
@@ -17,5 +17,6 @@
   "static/media/iphone-mock.png": "static/media/iphone-mock.c1d37d13.png",
   "static/media/iphonesvg.svg": "static/media/iphonesvg.825e4562.svg",
   "static/media/macbooksvg.svg": "static/media/macbooksvg.bb5164a1.svg",
+  "static/media/react-native-camera.jpg": "static/media/react-native-camera.d4a0a99d.jpg",
   "static/media/space.jpeg": "static/media/space.5fb09fb4.jpeg"
 }
