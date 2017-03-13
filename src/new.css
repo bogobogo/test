@@ -362,18 +362,14 @@ header {
     font-size: 30px;
 }
 
-.project-github-link-div {
-    display: block;
-    text-align: center;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    width: 97px;
-    height: 36px;
-    border-radius: 21px;
-    border: solid 1px #aa4dc8;
-}
 .project-github-link {
   width: 97px;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  border-radius: 21px;
+  border: solid 1px #aa4dc8;
   height: 36px;
   font-family: HelveticaNeueW01-45;
   font-size: 16px;
@@ -382,17 +378,15 @@ header {
   font-stretch: normal;
   line-height: 36px;
   letter-spacing: normal;
-  text-align: center;
   color: #8e21b1;
 }
 
-.project-github-link-div:hover {
+
+.project-github-link:hover {
     width: 97px;
     height: 36px;
     border-radius: 21px;
-    background-color: #cd68ed;
-}
-.project-github-link-div:hover .project-github-link {
+    background-color: #aa4dc8;
     letter-spacing: normal;
     text-decoration: none;
     text-align: center;
@@ -409,9 +403,9 @@ header {
         margin-top: auto;
     }
 
-    .project-github-link-div {
+    .project-github-link{
         text-align: center;
-        margin: 20px auto;
+        margin: 15px auto;
     }
 }
 

@@ -2,15 +2,18 @@
 
 ## About
 
-This repository hosts the Wix mobile open source website.
+This repository hosts the Wix mobile open source website. 
+<br>
+<br>
 The production code is hosted in the gh-pages branch.
+<br>
 The source files are hosted in the master branch.
 
 ## Usage
 
-if you wish to add your project:
-1) create an "openSourceIsAwesome.json" file in your repo. It should have the following properties:
-   {
+if you wish to add your project: <br>
+* create an "openSourceIsAwesome.json" file in your repo. It should have the following properties: <br>
+   ```{
         "name": "your repository name" (required),
         "description": "App-wide support for 100% native navigation with an easy cross-platform interface." (required),
         "title": "React Native Navigation" (required),
@@ -20,11 +23,11 @@ if you wish to add your project:
         "IOSDemoAppLink": "link to your demo app on the app store", (optional: add if you have a demoapp on the app store)
         "AndroidDemoAppLink": "link to your demo app on the play store" (optional: add if you have a demoapp on the app store)
         "Image": "link to image" (required with dimensions 243 × 417, but only if you have no videos to display)    
-    }
-
+    }```
+<br>
 If you wish to make change to the *design* of the website:
-1) clone the repo
-2) make your changes
-3) run 'yarn deploy'.
-4) ??? 
-5) thats it.
+* clone the repo
+* make your changes
+* run 'yarn deploy'.
+* ??? 
+* thats it.
