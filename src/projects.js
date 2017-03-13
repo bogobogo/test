@@ -1,8 +1,9 @@
 import navigationPoster from './img/react-native-navigation-poster.jpg'
 import interactablePoster from './img/react-native-interactable-poster.jpg'
+import cameraPoster from './img/react-native-camera.jpg'
 
 const projects = {
-    "projectList": [ "project5", "project1", "project4", "project3", "project2"],
+    "projectList": [ "project5", "project1", "project4", "project3"],
     "project5": {
         "description" : "Declarative API for handling fluid user interactions with views at 60 FPS in React Native",
         "title": "React Native Interactable",
@@ -19,7 +20,7 @@ const projects = {
         "description": "App-wide support for 100% native navigation with an easy cross-platform interface.",
         "title": "React Native Navigation",
         "github": "https://github.com/wix/react-native-navigation",
-        "AndroidVideoUrl": "https://wix.github.io/react-native//assets/themes/bootstrap-3/components/images/declerative/oneapp-navigation-movie.mp4",
+        "AndroidVideoUrl": "https://storage.googleapis.com/legati-app.appspot.com/react-navigation-android.mp4",
         "IOSVideoUrl": "https://wix.github.io/react-native//assets/themes/bootstrap-3/components/images/declerative/oneapp-navigation-movie.mp4",
         "IOSDemoAppLink": "",
         "Image": "",
@@ -43,9 +44,10 @@ const projects = {
         "description": "Advanced native camera control with pre-defined aspect ratio, crop and more",
         "github": "https://github.com/wix/react-native-camera-kit",
         "AndroidVideoUrl": "",
-        "IOSVideoUrl": "",
+        "IOSVideoUrl": "s",
         "IOSDemoAppLink": "",
         "Image": "s",
+        "poster": cameraPoster,
         "size" : "normal",
         "AndroidDemoAppLink": ""
     },

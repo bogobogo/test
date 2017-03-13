@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import macMockImg from '../img/MacMock.png'
+import macMockImg from '../img/macbooksvg.svg'
 import ReactDOM from 'react-dom';
 import { throttle } from 'lodash'
 

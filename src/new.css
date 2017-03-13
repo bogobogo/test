@@ -133,24 +133,26 @@ header {
             margin: 0 auto; } }
 
 .project {
-    background-color: rgb(249,247,247); 
+    background-color: rgba(249, 247, 247, 0.62); 
     display: flex; 
     vertical-align: top; 
     padding: 24px;
     padding-right: 0; 
-    margin-top: 30px; 
+    margin-top: 30px;
+    margin-bottom: 30px; 
     flex-wrap: wrap;
     width: 47%;
     
 }
 
 .big-project{
-    background-color: rgb(249,247,247); 
+    background-color: rgba(249, 247, 247, 0.62); 
     display: flex; 
     vertical-align: top; 
     padding: 24px;
     padding-right: 0; 
     margin-top: 30px; 
+    margin-bottom: 30px;
     flex-wrap: wrap;
     width: 100%;
 }
@@ -168,7 +170,7 @@ header {
     width: 80%;
     height: 417px;
     margin: 0 auto;
-    background: url('./img/MacMock.png') no-repeat top transparent;
+    background: url('./img/macbooksvg.svg') no-repeat top transparent;
     background-size: 100%;
 }
     @media screen and (max-width: 700px) {
@@ -279,6 +281,7 @@ header {
             }
         .project-demoapp-link {
             margin-right: 5px;
+            margin-top: 3px;
             width: 100%;
         }
         .project-title {
@@ -359,11 +362,41 @@ header {
     font-size: 30px;
 }
 
-
-.project-github-link {
+.project-github-link-div {
     display: block;
+    text-align: center;
     margin-bottom: 10px;
-    color: #733CA6;
+    margin-top: 20px;
+    width: 97px;
+    height: 36px;
+    border-radius: 21px;
+    border: solid 1px #aa4dc8;
+}
+.project-github-link {
+  width: 97px;
+  height: 36px;
+  font-family: HelveticaNeueW01-45;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 36px;
+  letter-spacing: normal;
+  text-align: center;
+  color: #8e21b1;
+}
+
+.project-github-link-div:hover {
+    width: 97px;
+    height: 36px;
+    border-radius: 21px;
+    background-color: #cd68ed;
+}
+.project-github-link-div:hover .project-github-link {
+    letter-spacing: normal;
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
 }
 @media screen and (max-width: 700px) {
     .project-title {
@@ -376,8 +409,9 @@ header {
         margin-top: auto;
     }
 
-    .project-github-link {
+    .project-github-link-div {
         text-align: center;
+        margin: 20px auto;
     }
 }
 
@@ -399,13 +433,13 @@ header {
 
 .project-video-iphone {
     position: relative;
-    top: 54px;
+    top: 53px;
     left: 32px;
 }
 .project-video-android {
     position: relative;
-    top: 54px;
-    left: 33px;
+    top: 53px;
+    left: 32px;
 }
 .big-project-video {
     position: relative;
@@ -421,6 +455,7 @@ header {
 .footer {
     border-top: 1px solid;
     color: rgb(223,226,229);
+    margin-top: 30px; 
 }
 
 .footer-container {

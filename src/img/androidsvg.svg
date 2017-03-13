@@ -4,8 +4,8 @@
     <title>android</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <rect id="path-1" x="14" y="53.0970696" width="180" height="320"></rect>
-        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="180" height="320" fill="white">
+        <rect id="path-1" x="13" y="52" width="182" height="322"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="182" height="322" fill="white">
             <use xlink:href="#path-1"></use>
         </mask>
         <rect id="path-3" x="0" y="0" width="208" height="425.778388" rx="20"></rect>
