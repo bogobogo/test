@@ -135,6 +135,8 @@ header {
 .project {
     background-color: rgba(249, 247, 247, 0.62); 
     display: flex; 
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.05);
+    border: solid 1px #dbdbdb ;
     vertical-align: top; 
     padding: 24px;
     padding-right: 0; 
@@ -149,6 +151,8 @@ header {
     background-color: rgba(249, 247, 247, 0.62); 
     display: flex; 
     vertical-align: top; 
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.05);
+    border: solid 1px #dbdbdb ;
     padding: 24px;
     padding-right: 0; 
     margin-top: 30px; 
@@ -170,7 +174,7 @@ header {
     width: 80%;
     height: 417px;
     margin: 0 auto;
-    background: url('./img/macbooksvg.svg') no-repeat top transparent;
+    background: url('./img/macbook.png') no-repeat top transparent;
     background-size: 100%;
 }
     @media screen and (max-width: 700px) {
@@ -369,16 +373,15 @@ header {
   margin-bottom: 10px;
   margin-top: 20px;
   border-radius: 21px;
-  border: solid 1px #aa4dc8;
+  border: solid 1px #733ca6;
   height: 36px;
-  font-family: HelveticaNeueW01-45;
   font-size: 16px;
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
   line-height: 36px;
   letter-spacing: normal;
-  color: #8e21b1;
+  color: #733ca6;
 }
 
 
@@ -386,7 +389,7 @@ header {
     width: 97px;
     height: 36px;
     border-radius: 21px;
-    background-color: #aa4dc8;
+    background-color: #733ca6;
     letter-spacing: normal;
     text-decoration: none;
     text-align: center;

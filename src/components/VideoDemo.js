@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import androidMock from '../img/androidsvg.svg'
-import iphoneMock from '../img/iphonesvg.svg'
+import androidMock from '../img/android.png'
+import iphoneMock from '../img/iphone.png'
 import androidIcon from '../img/android-black-icon.svg'
 import iphoneIcon from '../img/apple-black-icon.svg'
 import poster from '../img/react-native-navigation-poster.jpg'
