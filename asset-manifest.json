@@ -1,11 +1,12 @@
 {
-  "main.css": "static/css/main.6834c869.css",
-  "main.css.map": "static/css/main.6834c869.css.map",
-  "main.js": "static/js/main.7f16b07a.js",
-  "main.js.map": "static/js/main.7f16b07a.js.map",
+  "main.css": "static/css/main.f04f8f87.css",
+  "main.css.map": "static/css/main.f04f8f87.css.map",
+  "main.js": "static/js/main.2483c6f9.js",
+  "main.js.map": "static/js/main.2483c6f9.js.map",
   "static/media/MacMock.png": "static/media/MacMock.cfb4b8a7.png",
   "static/media/android-black-icon.svg": "static/media/android-black-icon.3677a603.svg",
   "static/media/android-camera.png": "static/media/android-camera.acb0f6af.png",
+  "static/media/androidsvg.svg": "static/media/androidsvg.bad9c7aa.svg",
   "static/media/app-store-badge.svg": "static/media/app-store-badge.d0558d91.svg",
   "static/media/apple-black-icon.svg": "static/media/apple-black-icon.9838ea6b.svg",
   "static/media/glyphicons-halflings-regular.eot": "static/media/glyphicons-halflings-regular.f4769f9b.eot",
@@ -15,5 +16,6 @@
   "static/media/glyphicons-halflings-regular.woff2": "static/media/glyphicons-halflings-regular.448c34a5.woff2",
   "static/media/google-play-badge.svg": "static/media/google-play-badge.56b44686.svg",
   "static/media/iphone-mock.png": "static/media/iphone-mock.c1d37d13.png",
+  "static/media/iphonesvg.svg": "static/media/iphonesvg.ddea8607.svg",
   "static/media/space.jpeg": "static/media/space.5fb09fb4.jpeg"
 }
