@@ -4,7 +4,6 @@
 
 This repository hosts the Wix mobile open source website. 
 <br>
-<br>
 The production code is hosted in the gh-pages branch.
 <br>
 The source files are hosted in the master branch.
@@ -23,10 +22,9 @@ if you wish to add your project: <br>
         "IOSVideoUrl": "https://storage.googleapis.com/legati-app.appspot.com/react-native-interactable-720.mov",(optional: if you want to add a video that was filmed on iphone),    
         "IOSDemoAppLink": "link to your demo app on the app store", (optional: add if you have a demoapp on the app store),    
         "AndroidDemoAppLink": "link to your demo app on the play store" (optional: add if you have a demoapp on the app store),    
-        "Image": "link to image" (required with dimensions 243 × 417, but only if you have no videos to display),    
+        "Image": "link to image" (required with dimensions 243 × 417, but only if you have no videos to display)  
     }
     ```
-<br>
 If you wish to make change to the *design* of the website:
 * clone the repo
 * make your changes
