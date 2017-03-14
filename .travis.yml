@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - node
+
+env:
+  global:
+    - NODE_VERSION=stable
+
+install:
+  - yarn install
+
+script:
+  - yarn run test
+  
+after_script:
+  - echo "BUILD FINISHED"
