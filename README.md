@@ -25,7 +25,7 @@ create an "openSourceIsAwesome.json" file in your repo. It should have the follo
     "IOSVideoUrl": "https://youriphonevideourl.com",(optional: if you want to add a video that was filmed on iphone),    
     "IOSDemoAppLink": "link to your demo app on the app store", (optional: add if you have a demoapp on the app store),    
     "AndroidDemoAppLink": "link to your demo app on the play store" (optional: add if you have a demoapp on the app store),    
-    "Image": "link to image" (required, but only if you have no videos to display),
+    "image": "link to image" (required, but only if you have no videos to display),
     "poster": "link to an image poster" (optional: a poster that will be displayed before the video plays)  
     }
 ```
