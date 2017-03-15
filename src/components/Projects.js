@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import androidImage from '../img/android-camera.png'
 import appStoreBadge from '../img/app-store-badge.svg'
 import playStoreBadge from '../img/google-play-badge.svg'
 import VideoDemo from './VideoDemo.js'

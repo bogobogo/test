@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
-import dash from '../img/dash.png'
 import logo from '../img/logo.png'
 
 class Header extends Component {
-  constructor(props){
-    super(props)
- }
 
   render() {
     return (
         <div>
        <section className="wix-page-header">
            <header>
-                <img src={logo} className="main-logo"/>
+                <img alt="wix-logo" src={logo} className="main-logo"/>
             </header>
             <div className="header-title-container">
              
