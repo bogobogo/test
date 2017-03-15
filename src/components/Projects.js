@@ -18,8 +18,7 @@ const ProjectsDemoAppLink = ({p}) => (
 class Projects extends Component {
   constructor(props){
     super(props)
-    this.state = {width: window.innerWidth, playing: this.props.projectsData.projectList[0]}
-    console.log(this.props.projectsData.projectList[0])
+    this.state = {width: window.innerWidth, playing: this.props.projectsData[0]['title']}
     window.addEventListener("orientationchange", this.updateStateOnOrientation.bind(this))
   }
   switchVideo(project){
@@ -35,30 +34,30 @@ class Projects extends Component {
   render() {
     return (
        <section className="projects-container">
-           {this.props.projectsData.projectList.map(project => {
-               let p = this.props.projectsData[project];
+           {this.props.projectsData.map(project => {
+               let p = project;
                if (p.size == 'normal') {
                return (
-                   <div onMouseEnter={() => this.switchVideo(project)} key={project} className="project">
+                   <div onMouseEnter={() => this.switchVideo(project.title)} key={project.title} className="project">
                         <div className='project-text-container'>
                         <h2 className="project-title">{p.title}</h2>
                         <p className="project-description">{p.description}</p>
                         <div className="project-github-link-div"><a className="project-github-link" href={p.github}>GitHub </a></div>
                          {(this.state.width > 700) && <ProjectsDemoAppLink p={p}/>}
                         </div> 
-                        {(p.AndroidVideoUrl || p.IOSVideoUrl) && <VideoDemo project={project} size="normal" poster={p.poster} playing={this.state.playing} AndroidVideoUrl={p.AndroidVideoUrl} IOSVideoUrl={p.IOSVideoUrl}/>}
+                        {(p.AndroidVideoUrl || p.IOSVideoUrl) && <VideoDemo project={project.title} size="normal" poster={p.poster} playing={this.state.playing} AndroidVideoUrl={p.AndroidVideoUrl} IOSVideoUrl={p.IOSVideoUrl}/>}
                         {(p.Image && (!(p.AndroidVideoUrl || p.IOSVideoUrl))) && <ProjectImage/>}
                         {(this.state.width <= 700) && <ProjectsDemoAppLink p={p}/>}
                     </div>
                )} else if (p.size === 'big') { return (
-                   <div onMouseEnter={() => this.switchVideo(project)} key={project} className="big-project">
+                   <div onMouseEnter={() => this.switchVideo(project.title)} key={project.title} className="big-project">
                         <div className='big-project-text-container'>
                         <h2 className="project-title">{p.title}</h2>
                         <p className="project-description">{p.description}</p>
                         <div className="project-github-link-div"><a className="project-github-link" href={p.github}>GitHub </a></div>
                          {(this.state.width > 700) && <ProjectsDemoAppLink p={p}/>}
                         </div> 
-                        <MacVideoDemo  project={project} poster={p.poster} playing={this.state.playing} MacVideoUrl={p.MacVideoUrl}/>
+                        <MacVideoDemo  project={project.title} poster={p.poster} playing={this.state.playing} MacVideoUrl={p.MacVideoUrl}/>
                         {(this.state.width <= 700) && <ProjectsDemoAppLink p={p}/>}
                     </div>)
                }

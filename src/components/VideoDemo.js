@@ -4,7 +4,6 @@ import androidMock from '../img/android.png'
 import iphoneMock from '../img/iphone.png'
 import androidIcon from '../img/android-black-icon.svg'
 import iphoneIcon from '../img/apple-black-icon.svg'
-import poster from '../img/react-native-navigation-poster.jpg'
 import { throttle } from 'lodash'
 
 class VideoDemo extends Component {
@@ -51,7 +50,8 @@ class VideoDemo extends Component {
   renderIOSDemo() {
       return (
         <div className="project-video-div" style={(this.state.showVideo === 'ios') ? styles.iphoneMockImg : styles.androidMockImg}>
-            <video playsInline={true} src={(this.state.showVideo === 'ios') ? this.props.IOSVideoUrl : this.props.AndroidVideoUrl} ref="vidRef" className={(this.state.showVideo === 'ios') ? "project-video-iphone" : "project-video-android"} poster={this.props.poster} height="320" width="180"  muted loop={true} >
+            <video playsInline={true} src={(this.state.showVideo === 'ios') ? this.props.IOSVideoUrl : this.props.AndroidVideoUrl} ref="vidRef" 
+            className={(this.state.showVideo === 'ios') ? "project-video-iphone" : "project-video-android"} poster={this.props.poster} height="320" width="180"  muted loop={true} >
             {/*<source src={(this.state.showVideo === 'ios') ? this.props.IOSVideoUrl : this.props.AndroidVideoUrl} type="video/mp4"/>*/}
                 Your browser does not support the video tag.
             </video>
@@ -69,6 +69,7 @@ class VideoDemo extends Component {
       )
   }
   render() {
+      
     return (
         <div className="project-media-container">
             {(this.props.IOSVideoUrl) ? this.renderIOSDemo() :this.renderAndroidDemo()}
