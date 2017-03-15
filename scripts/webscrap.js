@@ -7,7 +7,7 @@
 //     .then(res => console.log(res))
 // });
 var request = require("request")
-projectList = ['https://raw.githubusercontent.com/bogobogo/opensource2/master/openSourceIsAwesome.json']
+var projectList = ['https://raw.githubusercontent.com/bogobogo/opensource2/master/openSourceIsAwesome.json']
 
 
 var url = "https://raw.githubusercontent.com/bogobogo/opensource2/master/openSourceIsAwesome.json"
