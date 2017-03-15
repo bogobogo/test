@@ -17,6 +17,7 @@ install:
 script:
   - yarn run test
   - yarn run webscrap
+  - yarn deploy
 
 after_script:
   - echo "BUILD FINISHED"
