@@ -70,7 +70,8 @@ projectList.forEach(function(projectUrl){
     if (!error && response.statusCode === 200) {
         console.log(body) // Print the json response
         if ((((((body.title) && (body.description)) && body.title) && body.github) && body.size) && ((body.AndroidVideoUrl || body.IOSVideoUrl) || body.image)) {
-            projectsData.append(body)
+            console.log(projectsData)
+            projectsData.push(body)
         }
     }
 })
