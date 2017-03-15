@@ -3,9 +3,10 @@ node_js:
   - node
 
 env:
+  - CI=false
   global:
     - NODE_VERSION=stable
-    - CI=false
+    
 
 before_install:
   - set -e
